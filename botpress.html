@@ -1,22 +1,91 @@
-<script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
-<script>
-  window.botpressWebChat.init({
-      "composerPlaceholder": "ask a question",
-      "botConversationDescription": "Chatbot trained on OneStream EPM",
-      "botId": "b58ed486-efbc-4222-b577-05908e755da1",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "b58ed486-efbc-4222-b577-05908e755da1",
-      "botName": "OneStream AI Assistant",
-      "avatarUrl": "https://www.eejournal.com/wp-content/uploads/2023/05/max-0231-image-for-home-page-robots.jpg",
-      "termsConditions": "This application is for demonstration purposes only and the output data may be inaccurate.",
-      "privacyPolicy": "https://inlumi.com/privacy",
-      "emailAddress": "solutionsteam@inlumi.com",
-      "website": "https://www.inlumi.com",
-      "stylesheet": "https://webchat-styler-css.botpress.app/prod/9a5a0821-409f-4bfd-bb8b-82aebb08e27a/v64719/style.css",
-      "useSessionStorage": true,
-      "showBotInfoPage": true,
-      "enableConversationDeletion": true,
-      "showPoweredBy": true
-  });
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Botpress in a div</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: white;
+        background-color: #000000;
+        font-family: Arial, sans-serif;
+      }
+ 
+      .center-div {
+        width: 50vw;
+        height: 80vh;
+        background-color: rgb(102, 71, 255);
+        border-radius: 15px;
+        padding: 5px;
+        box-sizing: border-box;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+ 
+      @media only screen and (max-width: 600px) {
+        .center-div {
+          height: 40vh;
+          width: 80vw;
+          background-color: rgb(102, 71, 255);
+          border-radius: 15px;
+          padding: 5px;
+          box-sizing: border-box;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+ 
+  <body>
+    <div>
+      <p style="text-align: center;">Botpress Chatbot in a <span><</span><span>div></span></p>
+      <div class="absolute inset-4 ">
+        <div
+          class="center-div relative h-full w-full overflow-clip rounded-md border border-zinc-200 bg-white p-2 px-0 py-0"
+        >
+          <iframe
+            style="border: none;"
+            srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+            <script>
+              window.botpressWebChat.init({
+                "composerPlaceholder": "ask a question",
+                "botConversationDescription": "Chatbot trained on OneStream EPM",
+                "botId": "b58ed486-efbc-4222-b577-05908e755da1",
+                "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+                "messagingUrl": "https://messaging.botpress.cloud",
+                "clientId": "b58ed486-efbc-4222-b577-05908e755da1",
+                "botName": "OneStream AI Assistant",
+                "avatarUrl": "https://www.eejournal.com/wp-content/uploads/2023/05/max-0231-image-for-home-page-robots.jpg",
+                "termsConditions": "This application is for demonstration purposes only and the output data may be inaccurate.",
+                "privacyPolicy": "https://inlumi.com/privacy",
+                "emailAddress": "solutionsteam@inlumi.com",
+                "website": "https://www.inlumi.com",
+                "stylesheet": "https://webchat-styler-css.botpress.app/prod/9a5a0821-409f-4bfd-bb8b-82aebb08e27a/v64719/style.css",
+                "useSessionStorage": true,
+                "showBotInfoPage": true,
+                "enableConversationDeletion": true,
+                "showPoweredBy": true
+                  
+              });
+            window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+            </script></body>"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
