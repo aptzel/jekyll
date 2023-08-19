@@ -1,46 +1,8 @@
+<flowise-fullchatbot></flowise-fullchatbot>
 <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
-        chatflowid: "a179dc0d-176f-4441-95f4-e374b357f364",
-        apiHost: "https://flowise-production-183b.up.railway.app",
-        chatflowConfig: {
-            // topK: 2
-        },
-        theme: {
-            button: {
-                backgroundColor: "#3B81F6",
-                right: 20,
-                bottom: 20,
-                size: "medium",
-                iconColor: "white",
-                customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
-            },
-            chatWindow: {
-                welcomeMessage: "Hello! This is custom welcome message",
-                backgroundColor: "#ffffff",
-                height: 700,
-                width: 400,
-                fontSize: 16,
-                poweredByTextColor: "#303235",
-                botMessage: {
-                    backgroundColor: "#f7f8ff",
-                    textColor: "#303235",
-                    showAvatar: true,
-                    avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
-                },
-                userMessage: {
-                    backgroundColor: "#3B81F6",
-                    textColor: "#ffffff",
-                    showAvatar: true,
-                    avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
-                },
-                textInput: {
-                    placeholder: "Type your question",
-                    backgroundColor: "#ffffff",
-                    textColor: "#303235",
-                    sendButtonColor: "#3B81F6",
-                }
-            }
-        }
+    Chatbot.initFull({
+        chatflowid: "04ef20ab-46c5-4173-bf7e-851a93f3670b",
+        apiHost: "https://flowise-chatbot-demo.onrender.com",
     })
 </script>
